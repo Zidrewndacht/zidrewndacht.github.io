@@ -1,5 +1,5 @@
 let item = 0 //contador de imagens;
-const max = 79 //número da última imagem;
+const max = 80 //número da última imagem+1;
 
 function proxImagem( img ){
 	fetch("img/"+img+".jpg")
@@ -31,7 +31,7 @@ function proxImagem( img ){
 
 /** Atualização temporizada: */
 window.onload = setInterval(function(){ 
-	proxImagem( item++ %92 );
+	proxImagem( item++ %max );
     let scrollPoint = window.scrollY + window.innerHeight;
 	window.scrollTo({ top: scrollPoint, behavior: 'smooth' })
 }, 2000);
