@@ -29,14 +29,7 @@ function proxImagem( img ){
 		})
 }*/
 
-/** Atualização temporizada: */
-window.onload = setInterval(function(){ 
-	proxImagem( item++ %max );
-    let scrollPoint = window.scrollY + window.innerHeight;
-	window.scrollTo({ top: scrollPoint, behavior: 'smooth' })
-}, 2000);
-
-/** Atualização via scroll: 
+/** Atualização via scroll: */
 window.onscroll = function(){ //https://stackoverflow.com/a/46718465
     let altura = document.body.scrollHeight; 
     let scrollPoint = window.scrollY + window.innerHeight;
@@ -44,10 +37,18 @@ window.onscroll = function(){ //https://stackoverflow.com/a/46718465
     if(scrollPoint >= altura){
 		proxImagem( item++ %max );
     }
-}*/
+}
 
 window.onload = function(){
+	/** 5 primeiras imagens: */
 	for(item = 0; item <5; item++){
 		proxImagem( item );
 	}
+
+	/** Atualização temporizada: */
+	setInterval(function(){ 
+		proxImagem( item++ % max );
+		let scrollPoint = window.scrollY + window.innerHeight;
+		window.scrollTo({ top: scrollPoint, behavior: 'smooth' })
+	}, 2000);
 }
