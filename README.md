@@ -1,6 +1,9 @@
 # zidrewndacht.github.io
 Homepage em construção.
 
+Modificado em 28 de abril.
+
+
 Lattes: [link](https://lattes.cnpq.br/5902407884440306)
 
 Projetos com demonstração estática possível no GitHub Pages (nos parênteses, linguagens, ferramentas e protocolos relevantes usados na implementação original) são listados a seguir:
